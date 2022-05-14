@@ -1,0 +1,250 @@
+body {
+  margin: 0;
+  background-color: #0c1a11;
+  font-family: "IBM Plex Mono", monospace;
+  user-select: none;
+}
+#download{
+text-decoration: none;
+}
+#circle {
+  height: 300px;
+  width: 300px;
+  background-color: #15d989;
+  border-radius: 300px;
+  position: absolute;
+  top: -86px;
+  left: -97px;
+}
+
+#main {
+  height: 100vh;
+  backdrop-filter: blur(250px);
+  -webkit-backdrop-filter: blur(250px);
+  z-index: 9;
+  overflow: hidden;
+}
+
+.navbar {
+  padding: 25px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  z-index: 999;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#heading {
+  font-size: 20px;
+  padding-left: 40px;
+  font-weight: bold;
+}
+
+.options {
+  display: flex;
+  padding-right: 40px;
+}
+
+.options div {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+#left {
+  padding: 60px;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+ 
+}
+#circular-text-container{
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+margin-top: 20px;
+}
+#circular-text-h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  position: absolute;
+  margin-top: -129px;
+  margin-right: -10px;
+}
+#circular-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 160px;
+  animation: animate 8s linear infinite;
+  width:160px;
+}
+
+
+
+@keyframes animate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#circular-text span {
+  position: absolute;
+  transform-origin: 0 80px;
+  margin: 2px;
+  color:white;
+}
+#bigText{
+  font-weight: bold;
+  font-size:64px;
+  color:white;
+}
+#description{
+  color:white;
+  font-size: 16px;
+}
+.green, .white {
+  padding: 0;
+  margin: 0;
+  display: inline;
+}
+
+.green {
+  color:#15d989;
+}
+.greenLogo {
+  color:#50CB73;
+  font-size: 50px;
+}
+.bg-white{
+  width: 580px;
+  height: 580px;
+  background: linear-gradient(93.3deg, #FFFFFF 0%, #C1CCC7 100%);
+  border-radius: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+#right {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 90vh;
+}
+
+.bg-white img {
+  width: 400px;
+  height: 315px;
+}
+
+#socials 
+{
+  margin: 30px;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#socialBubble{
+  height: 40px;
+  width:40px;
+  border-radius: 30px;
+  display:flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background: #6E8678;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#startopleft, #starbottomleft, #startopright, #starbottomright {
+  position: absolute;
+}
+
+#startopleft {
+  top: 60px;
+  left: 20px;
+}
+#startopright{
+  top:50px;
+  right: 20px;
+}
+#starbottomleft{
+  left: 20px;
+  bottom: 20px;
+}
+#starbottomright{
+ right: 20px;
+bottom: 20px;
+}
+
+#circular-text #socialBubble {
+  
+  animation: animate2 8s linear infinite;
+}
+#sm-download {
+  display: none;
+}
+
+@keyframes animate2 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #main, #circle {
+    display: none;
+  }
+  #sm-download {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding:20px;
+    color: white;
+  }
+  #sm-download p {
+    text-align: center;
+  }
+  #sm-download h1 {
+   color:white;
+    text-align: center;
+  }
+  #sm-download a{
+    margin-top: 20px;
+    border: none;
+    background-color: #15d989;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    color: #0c1a11;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+  }
+}
